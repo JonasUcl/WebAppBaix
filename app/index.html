@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Styles -->
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="lib/web-fonts-with-css/webfonts/fa-regular-400.woff2" rel="stylesheet"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/bootstrap/bootstrap.min.css" />
+    <!--  <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+
+   <!-- bootstrap-->
+    <script src="lib/popper/popper.min.js"></script>
+    <script src="lib/jquery/jquery-3.2.1.slim.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+
+     <!--  angular -->
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    
+    <!-- Routers and Module-->
+    <script src="app.module.js"></script>
+    <script src="app.routers.js"></script>
+
+
+    <!-- Services -->
+    <script src="js/services/auth.service.js"></script>
+    <!-- Controllers -->
+    <script src="js/controllers/login.controller.js"></script>
+    <script src="js/controllers/home.controller.js"></script>
+
+</head>
+
+<body ng-app="baixouPortal" style="background-color:rgb(102, 169, 214)">
+    <div class="container-fluid">
+        <div ui-view></div>
+    </div>
+</body>
+
+</html>

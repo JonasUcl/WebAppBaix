@@ -1,0 +1,33 @@
+<div class="login-container">
+  <div class="row" style="padding-top:20px;">
+    <div class="col-sm-4"></div>
+    <div class="col-md-4">
+      <fieldset class="login-logo">
+        <div style="text-align:center;">
+        </div>
+      </fieldset>
+      <div class="login-title">
+        <h5 class="text-title-login">WebApp-Baixou</h5>
+      </div>
+      <div name="loginform" style="padding-top:30px;" novalidate>
+        <fieldset>
+          <form ng-submit="onFormSubmit($event, loginForm);" name="loginForm">
+            <div>
+              <label class="login-input-text">Digite seu E-mail</label>
+            </div>
+            <input type="text" placeholder="e-mail" ng-model="username">
+            <div>
+              <button style="cursor:pointer" class="btn" type="submit">Send E-mail</button>
+            </div>
+          </form>
+          <div ng-show="failed" class="alert alert-danger" role="alert">Error ao efetuar o login.</div>
+          <div ng-show='loading' class="loading-container">
+            <span class="spinner-text">Carregando</span>
+            <img class="login-spinner" src="img/orange-dots-spinner.gif" />
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="row" style="background-color:rgb(0, 51, 146);color:white;">
+  <div class="col-12">
+      <div class="login-title">
+          <h5 style="color: white; text-align:center">WebApp-Baixou</h5>
+        </div>
+    <input ng-model="searchFiltro" type="text" style="width: 15em; margin-left: auto;" class="form-control" placeholder="Search" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+  </div>
+</div>
+<div ng-repeat="post in data | filter:searchFiltro" style="background-color:white; margin:1em">
+  <card class="featured">
+    <header class="card" style="background-color: rgb(0, 51, 146); color:white">
+      <h6 class="header-text">{{post.titulo}}</h6>
+    </header>
+    <div class="row">
+      <div class="col-md-6" style="padding-top: 2em; padding-left: 2em;">
+        <p> Melhor Preço R${{post.preco}} !</p>
+        <p ng-if="post.nparcela != null"> Dividimos em até {{post.nparcela}}X sem juros</p>
+        <p ng-if="post.vparcela != null"> Apenas R${{post.vparcela}} por parcela!</p>
+      </div>
+      <div class="col-md-6">
+        <img class="Image" ng-src="{{post.imagem}}">
+      </div>
+    </div>
+  </card>
+</div>
+
+
+
+
+<!-- <div class="card featured" class="col-md-6">
+  <img class="Image" ng-src="{{post.imagem}}">
+  <div class="col-md-6">
+    <p>{{post.titulo}}</p>
+    <p> Valor do Produto R${{post.preco}}</p>
+    <p> N° Parcelas {{post.nparcela}}</p>
+    <p> Valor da Parcela R${{post.vparcela}}</p>
+  </div> -->
